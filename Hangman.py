@@ -4,8 +4,8 @@
 
 from words import wordlist
 from random import choice
-from os import system
-# Btw I use os to exit because I don't like the python exit
+from sys import exit
+# I'm using sys instead because it's better and cleaner
 
 tries = 6
 letterguesses = 0
@@ -25,7 +25,9 @@ def guess():
     return input("Guess: ")
 
 def guess_check(guess):
+
     # Idk how tf this function works
+
     global letterguesses
     global word
     global tries
@@ -47,12 +49,12 @@ def guess_check(guess):
 def correct():
     print("")
     print(f"You got it! The word was {word}!")
-    system("exit")
+    exit()
 
 def fail():
     print("")
     print(f"You didn't get it :( The word was {word}.")
-    system("exit")
+    exit()
 
 print(f"Word length: {wordlen}")
 print("")
