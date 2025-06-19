@@ -49,11 +49,13 @@ def guess_check(guess):
 def correct():
     print("")
     print(f"You got it! The word was {word}!")
+    input("Press Enter to exit...")
     exit()
 
 def fail():
     print("")
     print(f"You didn't get it :( The word was {word}.")
+    input("Press Enter to exit...")
     exit()
 
 print(f"Word length: {wordlen}")
